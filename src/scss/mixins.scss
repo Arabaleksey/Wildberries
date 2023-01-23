@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+@mixin large-text {
+    font: {
+      family: 'Roboto';
+      size: 32px;
+      weight: 700;
+    }
+    color: $black;
+}
+
+@mixin medium-text {
+    font: {
+      family: 'Roboto';
+      size: 20px;
+      weight: 400;
+    }
+    color: $black;
+}
+
+@mixin regular-text {
+    font: {
+      family: 'Roboto';
+      size: 13px;
+      weight: 700;
+    }
+}
+
+@mixin main-border {
+    border: 3px solid $SUB-COLOR;
+    border-radius: 10px;
+}
+
+@mixin sub-border {
+    border: 3px solid $white;
+    border-radius: 10px;
+}
+
+@mixin sub-border2 {
+    border: 1px solid $black;
+    border-radius: 10px;
+}

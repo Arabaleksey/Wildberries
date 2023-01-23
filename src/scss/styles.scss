@@ -1,0 +1,65 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+@import "./node_modules/bootstrap/scss/transitions";
+
+@import "./node_modules/bootstrap/scss/carousel";
+@import 'nullstyles.scss';
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'main.scss';
+@import 'header.scss';
+@import 'banner.scss';
+@import 'popular-cards.scss';
+@import 'modal-cart.scss';
+@import 'modal-pic.scss';
+@import 'preloader.scss';
+
+.carousel-control-prev, .carousel-control-next {
+    @media only screen and (max-width: 576px) {
+        display: none;
+    }
+}
+
+.carousel-indicators {
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    width: 15px;
+    height: 15px;
+    text-indent: -999px;
+    cursor: pointer;
+    opacity: 1;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid #0000;
+    border-radius: 50%;
+    flex: 0 auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-indicators .active {
+    background-color: $SUB-COLOR;
+    width: 20px;
+    height: 20px;
+}

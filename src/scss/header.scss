@@ -1,0 +1,110 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.header {
+    background-color: $MAIN-COLOR;
+    height: 100px;
+    @media only screen and (max-width: 768px) {
+        height: 75px;
+    }
+    
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    
+    }
+    &__img {
+        flex: 0 1 25%;
+        margin: 0 18px 0 0;
+        @media only screen and (max-width: 576px) {
+            margin: 0 5px 0 0;
+        }
+    }
+
+    &__input {
+        flex: 0 1 30%;
+        height: 50px;
+        @include main-border;
+        @include regular-text;
+        padding: 0 0 0 15px;
+        margin: 0 18px 0 0;
+        @media only screen and (max-width: 768px) {
+            height: 40px;
+        }
+        @media only screen and (max-width: 576px) {
+            font-size: 9px;
+            margin: 0 5px 0 0;
+        }
+        
+        
+    }
+
+    &__input::placeholder {
+        @include regular-text;
+        color: $grey;
+        @media only screen and (max-width: 576px) {
+            font-size: 9px;
+        }
+        
+    }
+
+    &__input:focus {
+        box-shadow: $shadow; 
+    }
+
+    &__cart-btn {
+        position: relative;
+        width: 150px;
+        height: 50px;
+        margin: 0 15px 0 0;
+        @media only screen and (max-width: 768px) {
+            height: 40px;
+        }
+        @media only screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__cart-pic {
+        position: relative;
+        cursor: pointer;
+        display: none;
+        max-width: 40px;
+        height: 40px;
+        &:hover {
+            background-color: $SUB-COLOR;
+        }
+        &:active {
+            box-shadow: $shadow;
+        }
+        img {
+            max-width: 40px;
+            height: auto;
+        }
+        @media only screen and (max-width: 576px) {
+            display: block;
+        }
+        &_count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $red;
+            background-color: $red;
+            border-radius: 50%;
+            @include regular-text;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+}
+

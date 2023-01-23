@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/scss/styles.scss">
+    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <title>Wildberries</title>
+</head>
+<body>
+
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__img"><picture>
+                <source  srcset="./src/img/logo.png" media="(min-width: 769px)">
+                <source  srcset="./src/img/small_logo.png" media="(min-width: 577px)">
+                <img src="./src/img/micro_logo.png" alt="logo">
+              </picture></div>
+            <input class="header__input" type="text" id="search" placeholder="Поиск...">
+            <button class="header__cart-btn btn" id="cart">Корзина
+                <div class="header__cart-pic_count" id="header__cart-pic_count">0</div>
+            </button>
+            <div class="header__cart-pic" id="cart-pic">
+            <img src="./src/img/icons8-корзина-48.png" alt="basket">
+            <div class="header__cart-pic_count">0</div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <picture class="slyder-pic">
+                    <source  srcset="./src/img/banner-1.jpg" media="(min-width: 769px)">
+                    <img src="./src/img/banner-1-small.jpg" alt="logo">
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture class="slyder-pic">
+                    <source  srcset="./src/img/banner-2.jpg" media="(min-width: 769px)">
+                    <img src="./src/img/banner-2-small.jpg" alt="logo">
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture class="slyder-pic">
+                    <source  srcset="./src/img/banner-3.jpg" media="(min-width: 769px)">
+                    <img src="./src/img/banner-3-small.jpg" alt="logo">
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture class="slyder-pic">
+                    <source  srcset="./src/img/banner-4.jpg" media="(min-width: 769px)">
+                    <img src="./src/img/banner-4-small.jpg" alt="logo">
+                </picture>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden"></span>
+            </button>
+          </div>
+    </section>
+
+    <section class="popular">
+        <div class="container">
+            <h1 class="popular__title">Хиты продаж</h1>
+            <div class="row" id="row">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-cart" id="modal-cart">
+        <div class="modal-cart__body" id="modal-body">
+            <div class="modal-cart__close" id="modal-close">&#10006</div>
+            <ul class="modal-cart__list" id="modal-cart__list">
+
+
+            </ul>
+            <div class="modal-cart__bottom">
+                <button class="modal-cart__clear btn" id="modal-cart__clear">Очистить корзину</button>
+                <button class="modal-cart__order btn">Оформить заказ</button>
+                <div class="modal-cart__total" >Итого: <span id="modal-cart__total"></span> руб. </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-pic" id="modal-pic">
+        <div class="modal-pic__body" id="modal-pic__body">
+            <div class="modal-pic__close" id="modal-pic-close">&#10006</div>
+            <div class="modal-pic__wrapper-img" id="modal-pic__wrapper-img">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

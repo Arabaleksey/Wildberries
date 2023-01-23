@@ -1,0 +1,125 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.modal-cart {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%) scale(0);
+    transition: transform .8s ease;
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+    }
+
+    &__body {
+        width: 50%;
+        height: 50%;
+        padding: 15px;
+        background-color: $white;
+        @include main-border;
+        position: relative;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        height: 90%;
+        overflow-y: scroll;
+        padding-right: 5px;
+        li {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            max-width: 99%;
+            @include sub-border2;
+            margin-top: 10px;
+        }
+    }
+
+    &__empty-item {
+        @include regular-text;
+        justify-content: center;
+    }
+
+    &__item {
+        overflow: hidden;
+        justify-content: space-around;
+
+        &_wrap-img {
+            width: 100px;
+            height: 100px;
+        }
+
+        &_image {
+            width: 100%;
+            height: auto;
+        }
+
+        &_title {
+            flex: 0 0 20%;
+            @include regular-text;
+            margin-right: 5px;
+        }
+
+        &_wrap-price {
+            display: flex;
+
+        }
+
+        &_count {
+            @include regular-text;
+            margin-right: 5px;
+        }
+
+        &_mult {
+            @include regular-text;
+            margin-right: 5px;
+        }
+
+        &_price {
+            @include regular-text;
+        }
+    }
+
+	&__bottom {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+	}
+
+	&__clear {
+        width: 110px;
+        height: 40px;
+        margin-right: 5px;
+	}
+
+	&__order {
+        width: 110px;
+        height: 40px;
+        margin-right: 5px;
+	}
+
+	&__total {
+        @include regular-text;
+	}
+
+}
+
+.open-cart {
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(233, 233, 233, 0.5);
+}
+

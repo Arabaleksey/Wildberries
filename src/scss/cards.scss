@@ -1,0 +1,48 @@
+#row{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition:2s all;
+    opacity:0;
+    visibility:hidden;
+}
+.card-img-top{
+    width: 30px;
+    height: 270px;
+    padding: 20px;
+}
+
+.card{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex: 0 1 270px;
+    :last-child{
+        margin-right: 0;
+    }
+    width: 1140px;
+    position: relative;
+}
+
+//BUTTON "QUICK VIEW"
+#card__modal{
+    position: relative;
+    top:-50%;
+    left:35%;
+}
+.card:hover .card__modal-btn{
+    opacity:1;
+    transition: 0.5s;
+  }
+.card__modal-btn{
+    border:none;
+    background-color: #D4D4D4;
+    opacity:0;
+    color:#000;
+    border-radius:50px;
+    width: 100px;
+    height: 30px;
+}

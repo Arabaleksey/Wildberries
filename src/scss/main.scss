@@ -1,0 +1,30 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.container {
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 -9px;
+    display: flex;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 1024px) {
+        justify-content: center;
+    }
+}
+
+.btn {
+    @include regular-text;
+    @include main-border;
+    background-color: $white;
+    &:hover {
+        color: $white;
+        background-color: $SUB-COLOR;
+    }
+    &:active {
+        box-shadow: $shadow;
+    }
+}
